@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+
+
+<ul>
+    <li *ngFor="let user of users;let i = index">{{i}} {{getName(i)}}</li>
+</ul>
+
+  <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+<input type ="text" ngModel placeholder=" enter the email"  name="email"><br><br>
+<input type=" password"  ngModel placeholder="enter the password" name="password"><br><br>
+<input type ="text" ngModel placeholder=" enter the name" name="name"><br><br>
+<button> add new user</button> <br><br>
+</form>  
+ 
+
+
+<!-- 
+ <form  #usersForm ="ngForm" (ngSubmit)="getUsersFormData(usersForm.value)">
+<input type="text"  ngModel placeholder=" enter the  email id" name="email"><br><br>
+<input type="password"ngModel placeholder="enter the password" name="pasaword"><br><br>
+<input type ="text"  ngModelplaceholder="enter the name" name="name">
+<br><br>
+<button>add item</button><br><br>
+</form> --> 
